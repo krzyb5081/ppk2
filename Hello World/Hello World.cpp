@@ -2,51 +2,6 @@
 
 int main()
 {
-    /*double a, b;
-    std::cout << "a = " << std::endl;
-    std::cin >> a;
-    std::cout << "b = " << std::endl;
-    std::cin >> b;
-    std::cout << "a + b = " << a + b << std::endl;
-    std::cout << "a - b = " << a - b << std::endl;
-    std::cout << "a / b = " << a / b << std::endl;
-    std::cout << "a * b = " << a * b << std::endl;*/
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     double AX, AY, Ax, Ay, Ai, Aj, vel;
     std::cout << "x: " << std::endl;
@@ -64,7 +19,27 @@ int main()
     AY = Ay;
     while ((AX != Ax + Ai) && (AY != Ay + Aj)) {
 
-        if()
+        if (Ai < 0) {
+            if (Ax + Ai <= AX) {
+                AX = Ax + Ai;
+            }
+        }
+        else {
+            if (Ax + Ai >= AX) {
+                AX = Ax + Ai;
+            }
+        }
+
+        if (Aj < 0) {
+            if (Ay + Aj <= AY) {
+                AY = Ay + Aj;
+            }
+        }
+        else {
+            if (Ay + Aj >= AY) {
+                AY = Ay + Aj;
+            }
+        }
 
         std::cout << "x: " << AX << "y: " << AY << std::endl;
     }
