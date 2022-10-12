@@ -1,4 +1,5 @@
 #include <iostream>
+#include <math.h>
 
 int main()
 {
@@ -12,37 +13,32 @@ int main()
     std::cin >> Ai;
     std::cout << "j: " << std::endl;
     std::cin >> Aj;
-    std::cout << "szybkosc: (jednostka/sekunde)" << std::endl;
-    std::cin >> vel;
 
     AX = Ax;
     AY = Ay;
-    while ((AX != Ax + Ai) && (AY != Ay + Aj)) {
 
-        if (Ai < 0) {
-            if (Ax + Ai <= AX) {
-                AX = Ax + Ai;
-            }
+    if (Ai < 0) {
+        if (Ax + Ai <= AX) {
+            AX = Ax + Ai;
         }
-        else {
-            if (Ax + Ai >= AX) {
-                AX = Ax + Ai;
-            }
+    }
+    else {
+        if (Ax + Ai >= AX) {
+            AX = Ax + Ai;
         }
-
-        if (Aj < 0) {
-            if (Ay + Aj <= AY) {
-                AY = Ay + Aj;
-            }
-        }
-        else {
-            if (Ay + Aj >= AY) {
-                AY = Ay + Aj;
-            }
-        }
-
-        std::cout << "x: " << AX << "y: " << AY << std::endl;
     }
 
+    if (Aj < 0) {
+        if (Ay + Aj <= AY) {
+            AY = Ay + Aj;
+        }
+    }
+    else {
+        if (Ay + Aj >= AY) {
+            AY = Ay + Aj;
+        }
+    }
+
+    std::cout << "x: " << AX << "y: " << AY << std::endl;
     
 }
